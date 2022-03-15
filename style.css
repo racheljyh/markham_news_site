@@ -1,0 +1,245 @@
+/* master syles */
+body{
+    margin: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+    --faded-red: rgb(209, 84, 84);
+}
+/* end of master styles */
+
+/* navigation bar style */
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.entire-navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.rightside{
+    display: flex;
+}
+.entire-navbar > .rightside > div{
+    margin-right: 20px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+.leftside div{
+    font-size: 1.65em;
+}
+.nav-link{
+    height: 25px;
+    border-bottom: 1.75px solid transparent;
+    transition: border-bottom 0.3s;
+}
+.nav-link a{
+    color: navy;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-link a:hover{
+    color: var(--faded-red);
+}
+.nav-link:hover{
+    border-bottom: 1.75px solid grey;
+}
+.current-nav{
+    border-bottom: 1.75px solid grey;
+}
+.current-nav a{
+    color: var(--faded-red) !important;
+}
+/* end of navigation bar style */
+
+/* header */
+.header-img {
+    background-image: linear-gradient(rgba(223, 229, 240, 0.836), #b1b8c9a9), url(images/header-bg.jpg);
+    min-height: 80vh;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin-bottom: 60px;
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+  }
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+.header-img h1{
+    margin-top: 250px;
+    text-align: center;
+    color: navy;
+    font-size: 5rem;
+}
+/* end of header */
+
+/* about us */
+.goal-blurb{
+    background-image: linear-gradient(rgba(223, 229, 240, 0.836), #b1b8c9a9), url(images/civic-centre.jpeg);
+    min-height: 80vh;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin-bottom: 60px;
+    border-left: 20px solid navy;
+}
+.goal-blurb h2{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: var(--faded-red);
+    font-size: 2.3rem;
+}
+.goal-blurb p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 190px;
+    margin-right: 190px;
+    text-align: left;
+    color: white;
+    font-size: 1.8rem;
+}
+.posts-header p{
+    text-align: left;
+    color: navy;
+    font-size: 2.2rem;
+    margin-left: 40px;
+}
+/* end of about us */
+
+/* post grid styles */ 
+.posts-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.post-wrapper{
+    position: relative;
+}
+.post-img{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+}
+.img-text{    
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.img-text .title{
+    transition: 0.75s;
+    font-weight: 500;
+    color: transparent;
+    text-align: center;
+    font-size: 1.2em;
+}
+.img-text:hover .title{
+    font-weight: 500;
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+}
+.img-darker{
+    transition: 0.5s;
+    filter: brightness(20%);
+}
+/* end of post grid styles */
+
+/* contact */
+.contact-heading h1{
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 2.6em;
+    color: navy;
+}
+.contact-left-menu h2{
+    margin-left: 30px;
+
+}
+.contact-left-menu form input,
+.contact-left-menu form textarea{
+    width: 50%;
+    font-size: 1.1rem;
+    margin: 30px;
+    padding: 0.8rem 0.6rem;
+    border: none;
+    border-bottom: 1.5px solid #f0f0f0;
+    outline: 0;
+}
+.contact-left-menu form input::placeholder,
+.contact-left-menu form textarea::placeholder{
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+.contact-left-menu form input:focus,
+.contact-left-menu form textarea:focus{
+    border-color: navy;
+}
+.submit-btn{
+    margin: 1rem 0;
+    border: none;
+    font-size: 1.3rem;
+    color: #fff;
+    background: navy;
+    opacity: 0.9;
+    padding: 0.8rem 3.4rem;
+    border-radius: 2rem;
+    transition: lightgrey;
+}
+.submit-btn:hover{
+    background: var(--faded-red);
+    cursor: pointer;
+}
+.contact-right-menu div{
+    margin: 30px;
+}
+/* end of contact */
+
+/* footer */
+.home-footer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 20px;
+    text-align: center;
+    color:black
+}
+/* end of footer */
+
